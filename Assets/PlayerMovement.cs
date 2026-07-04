@@ -15,12 +15,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Keyboard.current.dKey.isPressed)
         {
-            rb.AddForce(horizontalForce * Time.deltaTime, 0, 0);
+            rb.AddForce(horizontalForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if (Keyboard.current.aKey.isPressed)
         {
-            rb.AddForce(-horizontalForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-horizontalForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
